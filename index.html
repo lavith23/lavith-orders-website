@@ -1,163 +1,71 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LAMEZONE – Tech Help</title>
-  <style>
+<meta charset="UTF-8">
+<title>Support | Get Help</title>
+<style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #050505;
-      color: #e0faff;
-    }header {
-  padding: 22px;
-  background: linear-gradient(120deg, #00eaff, #0066ff, #001133);
-  text-align: center;
-  font-size: 33px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  color: #ffffff;
-  text-shadow: 0 0 12px #00eaff;
-}
-
-.hero {
-  padding: 80px 20px;
-  text-align: center;
-  background: url('https://i.ibb.co/zS68nGp/tech-bg.jpg') center/cover;
-  background-blend-mode: overlay;
-  background-color: rgba(0, 0, 20, 0.7);
-}
-
-.hero h1 {
-  font-size: 52px;
-  margin-bottom: 10px;
-  color: #00eaff;
-  text-shadow: 0 0 18px #0099ff;
-}
-
-.hero p {
-  font-size: 20px;
-  color: #cfcfcf;
-}
-
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  padding: 40px;
-}
-
-.card {
-  background: #0c0c0c;
-  border: 1px solid #00eaff44;
-  border-radius: 16px;
-  padding: 25px;
-  text-align: center;
-  box-shadow: 0 0 18px #00eaff33;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 25px #00eaff77;
-  border-color: #00eaff;
-}
-
-.card h3 {
-  color: #00eaff;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.order-btn {
-  margin-top: 15px;
-  background: linear-gradient(120deg, #00eaff, #0066ff);
-  color: black;
-  padding: 12px 25px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: bold;
-  transition: 0.3s;
-  width: 100%;
-}
-
-.order-btn:hover {
-  background: linear-gradient(120deg, #00c4ff, #0044dd);
-  transform: scale(1.05);
-}
-
-footer {
-  margin-top: 40px;
-  padding: 20px;
-  text-align: center;
-  background: #000;
-  color: #888;
-  font-size: 14px;
-}
-
-.logo { font-size: 40px; font-weight: bold; letter-spacing: 4px; color: #00eaff; text-shadow: 0 0 15px #00eaff, 0 0 30px #0066ff; animation: glow 2s infinite alternate; }
-
-@keyframes glow {
-  from { text-shadow: 0 0 10px #00eaff; }
-  to { text-shadow: 0 0 25px #0099ff, 0 0 45px #0066ff; }
-}
-
-body {
-  background: #02040a;
-}
-
-</style>
-
-  <script>
-    function order(service) {
-      const phone = "918209175150"; // WhatsApp number fixed
-      const msg = `Hello, I need help with: ${service}`;
-      const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
-      window.open(url, "_blank");
+        margin: 0;
+        padding: 0;
+        background: #0d0d0d;
+        font-family: Arial, sans-serif;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
     }
-  </script></head><body>
-  <header>
-      <div class="logo">LAMEZONE</div>
-    </header>  <section class="hero">
-    <h1>Tech Help Made Easy</h1>
-    <p>Setup • Fix • Guide • Optimize – Everything in one place</p>
-  </section>  <section class="services">
-    <div class="card">
-      <h3>Mobile Setup</h3>
-      <p>Full setup, cleaning, apps, backup & restore</p>
-      <button class="order-btn" onclick="order('Mobile Setup')">Get Help</button>
-    </div><div class="card">
-  <h3>Tech Issue Fix</h3>
-  <p>We solve any small mobile or tech problem</p>
-  <button class="order-btn" onclick="order('Tech Issue Fix')">Get Help</button>
+
+    .box {
+        background: #111;
+        padding: 30px;
+        border-radius: 15px;
+        width: 320px;
+        text-align: center;
+        box-shadow: 0 0 25px #222;
+    }
+
+    .title {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        padding: 14px;
+        margin-top: 12px;
+        background: #1a1a1a;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+        box-shadow: 0 0 10px #333;
+        transition: 0.2s;
+    }
+
+    .btn:hover {
+        background: #333;
+        box-shadow: 0 0 15px #555;
+    }
+</style>
+</head>
+<body>
+
+<div class="box">
+    <div class="title">Get Help</div>
+
+    <!-- WhatsApp Help -->
+    <a class="btn" href="https://wa.me/918209175051">
+        💬 Contact on WhatsApp
+    </a>
+
+    <!-- Chrome Option -->
+    <a class="btn" href="https://google.com">
+        🌐 Open Chrome
+    </a>
 </div>
 
-<div class="card">
-  <h3>WhatsApp Help</h3>
-  <p>Backup, transfer, restore, hidden settings</p>
-  <button class="order-btn" onclick="order('WhatsApp Help')">Get Help</button>
-</div>
-
-<div class="card">
-  <h3>Wi-Fi / Internet Fix</h3>
-  <p>Router setup, speed increase, connectivity issues</p>
-  <button class="order-btn" onclick="order('WiFi / Internet Fix')">Get Help</button>
-</div>
-
-<div class="card">
-  <h3>Phone Boost</h3>
-  <p>Remove lag, increase speed, clean storage</p>
-  <button class="order-btn" onclick="order('Phone Boost')">Get Help</button>
-</div>
-
-<div class="card">
-  <h3>Account Setup</h3>
-  <p>Gmail, Instagram, Facebook login or recovery</p>
-  <button class="order-btn" onclick="order('Account Setup')">Get Help</button>
-</div>
-
-  </section>  <footer>© 2025 LAMEZONE — All Rights Reserved</footer>
 </body>
 </html>
