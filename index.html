@@ -1,97 +1,163 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lavith Orders</title>
-
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LAMEZONE – Tech Help</title>
+  <style>
     body {
-        font-family: Arial, sans-serif;
-        background: #f2f2f2;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-    header {
-        background: #008CFF;
-        color: white;
-        padding: 20px;
-        font-size: 26px;
-        font-weight: bold;
-    }
-    .service-box {
-        background: white;
-        width: 90%;
-        margin: 15px auto;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        text-align: left;
-    }
-    img {
-        width: 100%;
-        border-radius: 10px;
-        margin-bottom: 10px;
-    }
-    h2 {
-        margin: 0 0 10px;
-    }
-    .order-btn {
-        display: block;
-        width: 100%;
-        background: #25D366;
-        color: white;
-        padding: 12px;
-        text-align: center;
-        border-radius: 10px;
-        margin-top: 10px;
-        font-size: 18px;
-        text-decoration: none;
-        font-weight: bold;
-    }
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #050505;
+      color: #e0faff;
+    }header {
+  padding: 22px;
+  background: linear-gradient(120deg, #00eaff, #0066ff, #001133);
+  text-align: center;
+  font-size: 33px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #ffffff;
+  text-shadow: 0 0 12px #00eaff;
+}
+
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+  background: url('https://i.ibb.co/zS68nGp/tech-bg.jpg') center/cover;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 20, 0.7);
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin-bottom: 10px;
+  color: #00eaff;
+  text-shadow: 0 0 18px #0099ff;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #cfcfcf;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+.card {
+  background: #0c0c0c;
+  border: 1px solid #00eaff44;
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 0 18px #00eaff33;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px #00eaff77;
+  border-color: #00eaff;
+}
+
+.card h3 {
+  color: #00eaff;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.order-btn {
+  margin-top: 15px;
+  background: linear-gradient(120deg, #00eaff, #0066ff);
+  color: black;
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.order-btn:hover {
+  background: linear-gradient(120deg, #00c4ff, #0044dd);
+  transform: scale(1.05);
+}
+
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  background: #000;
+  color: #888;
+  font-size: 14px;
+}
+
+.logo { font-size: 40px; font-weight: bold; letter-spacing: 4px; color: #00eaff; text-shadow: 0 0 15px #00eaff, 0 0 30px #0066ff; animation: glow 2s infinite alternate; }
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #00eaff; }
+  to { text-shadow: 0 0 25px #0099ff, 0 0 45px #0066ff; }
+}
+
+body {
+  background: #02040a;
+}
+
 </style>
 
-</head>
-<body>
-
-<header>Lavith Orders</header>
-
-<!-- Service 1 -->
-<div class="service-box">
-    <img src="https://i.imgur.com/04iV3uW.jpeg">
-    <h2>Phone Covers & Accessories</h2>
-    <p>Custom printed cases, tempered glass, chargers & more.</p>
-    <p><b>Price:</b> ₹99 – ₹299</p>
-    <a class="order-btn" href="https://wa.me/918209175051?text=I%20want%20Phone%20Accessories">Order on WhatsApp</a>
+  <script>
+    function order(service) {
+      const phone = "918209175150"; // WhatsApp number fixed
+      const msg = `Hello, I need help with: ${service}`;
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+      window.open(url, "_blank");
+    }
+  </script></head><body>
+  <header>
+      <div class="logo">LAMEZONE</div>
+    </header>  <section class="hero">
+    <h1>Tech Help Made Easy</h1>
+    <p>Setup • Fix • Guide • Optimize – Everything in one place</p>
+  </section>  <section class="services">
+    <div class="card">
+      <h3>Mobile Setup</h3>
+      <p>Full setup, cleaning, apps, backup & restore</p>
+      <button class="order-btn" onclick="order('Mobile Setup')">Get Help</button>
+    </div><div class="card">
+  <h3>Tech Issue Fix</h3>
+  <p>We solve any small mobile or tech problem</p>
+  <button class="order-btn" onclick="order('Tech Issue Fix')">Get Help</button>
 </div>
 
-<!-- Service 2 -->
-<div class="service-box">
-    <img src="https://i.imgur.com/9CWvvwO.jpeg">
-    <h2>Tech Gadget Selling</h2>
-    <p>Earphones, Smartwatches, Power banks, Bluetooth neckbands.</p>
-    <p><b>Price:</b> ₹149 – ₹999</p>
-    <a class="order-btn" href="https://wa.me/918209175051?text=I%20want%20Tech%20Gadgets">Order on WhatsApp</a>
+<div class="card">
+  <h3>WhatsApp Help</h3>
+  <p>Backup, transfer, restore, hidden settings</p>
+  <button class="order-btn" onclick="order('WhatsApp Help')">Get Help</button>
 </div>
 
-<!-- Service 3 -->
-<div class="service-box">
-    <img src="https://i.imgur.com/Sa7mOV4.jpeg">
-    <h2>Basic Home Services</h2>
-    <p>Small repairs, install help, cleaning help — done by students.</p>
-    <p><b>Price:</b> ₹49 – ₹149</p>
-    <a class="order-btn" href="https://wa.me/918209175051?text=I%20need%20Home%20Service">Book a Service</a>
+<div class="card">
+  <h3>Wi-Fi / Internet Fix</h3>
+  <p>Router setup, speed increase, connectivity issues</p>
+  <button class="order-btn" onclick="order('WiFi / Internet Fix')">Get Help</button>
 </div>
 
-<!-- Service 4 -->
-<div class="service-box">
-    <img src="https://i.imgur.com/lmM0M1K.jpeg">
-    <h2>Online Help Service</h2>
-    <p>Assignment help, notes printing, PDF making, small editing.</p>
-    <p><b>Price:</b> ₹10 – ₹50</p>
-    <a class="order-btn" href="https://wa.me/918209175051?text=I%20want%20Online%20Help">Order Now</a>
+<div class="card">
+  <h3>Phone Boost</h3>
+  <p>Remove lag, increase speed, clean storage</p>
+  <button class="order-btn" onclick="order('Phone Boost')">Get Help</button>
 </div>
 
+<div class="card">
+  <h3>Account Setup</h3>
+  <p>Gmail, Instagram, Facebook login or recovery</p>
+  <button class="order-btn" onclick="order('Account Setup')">Get Help</button>
+</div>
+
+  </section>  <footer>© 2025 LAMEZONE — All Rights Reserved</footer>
 </body>
 </html>
