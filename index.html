@@ -1,183 +1,22 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LAMEZONE – Tech Help</title>  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: radial-gradient(circle at top, #00111d, #000000 70%);
-      color: #e8ffff;
-      overflow-x: hidden;
-    }
+    <title>LAMEZONE - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    /* Neon Animated Header */
-    header {
-      padding: 25px;
-      text-align: center;
-      background: rgba(0, 40, 60, 0.6);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid #00eaff55;
-      box-shadow: 0 0 25px #00eaff55;
-    }
+<nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</nav>
 
-    .logo {
-      font-size: 45px;
-      font-weight: bold;
-      letter-spacing: 4px;
-      color: #00eaff;
-      text-shadow: 0 0 15px #00eaff, 0 0 35px #0088ff, 0 0 50px #00eaff;
-      animation: neonGlow 2s infinite alternate;
-    }
-
-    @keyframes neonGlow {
-      from {
-        text-shadow: 0 0 10px #00eaff;
-      }
-      to {
-        text-shadow: 0 0 30px #00eaff, 0 0 60px #0077ff;
-      }
-    }
-
-    /* Hero Section */
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-      background: url('https://i.ibb.co/zS68nGp/tech-bg.jpg') center/cover;
-      background-blend-mode: overlay;
-      background-color: rgba(0, 0, 20, 0.7);
-      box-shadow: inset 0 0 60px #00eaff33;
-    }
-
-    .hero h1 {
-      font-size: 55px;
-      color: #00eaff;
-      text-shadow: 0 0 25px #00eaff;
-      animation: floatText 3s infinite ease-in-out;
-    }
-
-    @keyframes floatText {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-12px); }
-      100% { transform: translateY(0); }
-    }
-
-    .hero p {
-      font-size: 20px;
-      color: #bfeeff;
-      margin-top: -5px;
-    }
-
-    /* Services */
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-      padding: 40px;
-    }
-
-    .card {
-      background: rgba(0, 20, 40, 0.7);
-      border: 1px solid #00eaff66;
-      border-radius: 18px;
-      padding: 25px;
-      text-align: center;
-      box-shadow: 0 0 25px #00eaff33;
-      transition: 0.3s;
-      backdrop-filter: blur(6px);
-    }
-
-    .card:hover {
-      transform: translateY(-6px) scale(1.03);
-      box-shadow: 0 0 30px #00eaff88;
-      border-color: #00eaff;
-    }
-
-    .card h3 {
-      font-size: 25px;
-      color: #00eaff;
-      text-shadow: 0 0 12px #00caff;
-    }
-
-    .order-btn {
-      margin-top: 18px;
-      background: linear-gradient(120deg, #00eaff, #0066ff);
-      color: black;
-      padding: 12px 25px;
-      border-radius: 14px;
-      border: none;
-      cursor: pointer;
-      font-size: 18px;
-      font-weight: bold;
-      transition: 0.3s;
-      box-shadow: 0 0 20px #00eaff55;
-    }
-
-    .order-btn:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 30px #00eaffaa;
-      background: linear-gradient(120deg, #00cfff, #0044dd);
-    }
-
-    footer {
-      margin-top: 50px;
-      padding: 20px;
-      text-align: center;
-      background: #000814;
-      color: #7aa7c7;
-      border-top: 1px solid #00bfff33;
-      font-size: 14px;
-    }
-  </style>  <script>
-    function order(service) {
-      const phone = "+91 82091 75051"; // Your WhatsApp number
-      const msg = `Hello, I need help with: ${service}`;
-      const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
-      window.open(url, "_blank");
-    }
-  </script></head><body>
-  <header>
-    <div class="logo">LAMEZONE</div>
-  </header>  <section class="hero">
-    <h1>Premium Tech Help</h1>
-    <p>Fast • Easy • Expert • Reliable</p>
-  </section>  <section class="services">
-    <div class="card">
-      <h3>Mobile Setup</h3>
-      <p>Full setup, cleaning, apps, backup</p>
-      <button class="order-btn" onclick="order('Mobile Setup')">Get Help</button>
-    </div><div class="card">
-  <h3>Tech Issue Fix</h3>
-  <p>Any small mobile or tech problem fixed</p>
-  <button class="order-btn" onclick="order('Tech Issue Fix')">Get Help</button>
+<div class="hero">
+    <h1 class="title">LAMEZONE</h1>
+    <a class="btn" href="services.html">Explore Services</a>
 </div>
 
-<div class="card">
-  <h3>WhatsApp Help</h3>
-  <p>Backup, transfer, hidden features</p>
-  <button class="order-btn" onclick="order('WhatsApp Help')">Get Help</button>
-</div>
-
-<div class="card">
-  <h3>WiFi / Internet Fix</h3>
-  <p>Router setup, speed boost, fixing issues</p>
-  <button class="order-btn" onclick="order('WiFi / Internet Fix')">Get Help</button>
-</div>
-
-<div class="card">
-  <h3>Phone Boost</h3>
-  <p>Lag remove, speed increase, clean storage</p>
-  <button class="order-btn" onclick="order('Phone Boost')">Get Help</button>
-</div>
-
-<div class="card">
-  <h3>Account Setup</h3>
-  <p>Gmail, Instagram, FB login & recovery</p>
-  <button class="order-btn" onclick="order('Account Setup')">Get Help</button>
-</div>
-
-  </section>  <footer>
-    © 2025 LAMEZONE — All Rights Reserved
-  </footer>
 </body>
-    </html>
+</html>
