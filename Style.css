@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #0a0a0a;
+    color: white;
+}
+
+nav {
+    background: #111;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+nav a {
+    color: cyan;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+    text-shadow: 0 0 10px cyan;
+}
+
+.hero {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.title {
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px cyan; }
+    to { text-shadow: 0 0 25px blue; }
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 22px;
+    background: cyan;
+    color: black;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+}
