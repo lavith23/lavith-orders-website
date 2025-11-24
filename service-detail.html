@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Service Detail — LAMEZONE</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body class="page-service-detail">
+
+  <header class="header">
+    <div class="logo">LAMEZONE</div>
+    <nav class="nav">
+      <a href="services.html">Back to Services</a>
+    </nav>
+  </header>
+
+  <main class="detail-wrap">
+    <h1 id="sd_service">Service Name</h1>
+    <p id="sd_desc" style="color:#475569">Description</p>
+    <div class="price" id="sd_price">₹0</div>
+
+    <div style="margin-top:18px">
+      <label style="display:block;margin-bottom:6px">Your name</label>
+      <input id="order_name" placeholder="Your name" style="padding:10px;border-radius:8px;width:100%;border:1px solid #ddd">
+
+      <label style="display:block;margin-top:10px;margin-bottom:6px">Phone (optional)</label>
+      <input id="order_phone" placeholder="Phone or WhatsApp" style="padding:10px;border-radius:8px;width:100%;border:1px solid #ddd">
+
+      <label style="display:block;margin-top:10px;margin-bottom:6px">Add note</label>
+      <textarea id="order_note" placeholder="Any details (date, quantity...)" style="padding:10px;border-radius:8px;width:100%;border:1px solid #ddd"></textarea>
+
+      <div style="margin-top:14px;display:flex;gap:12px">
+        <button class="btn-primary" onclick="orderNow()">Order on WhatsApp</button>
+        <a class="btn-outline" href="services.html">Cancel</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>© 2025 LAMEZONE</footer>
+</body>
+</html>
