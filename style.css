@@ -82,3 +82,62 @@ footer{padding:20px;text-align:center;color:#475569;margin-top:36px}
   .promo{width:100%}
   .features{flex-direction:column}
     }
+/* -------------- Header + small live banner -------------- */
+.header { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 20px; background:#111827; color:#fff; }
+.left-header { display:flex; flex-direction:column; gap:6px; }
+.logo { font-weight:800; font-size:20px; color:var(--accent); }
+
+/* small live banner */
+.live-banner {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-size:13px;
+  color:#ff2e2e;             /* red text */
+  background: rgba(255,46,46,0.06);
+  padding:6px 10px;
+  border-radius:8px;
+  border:1px solid rgba(255,46,46,0.12);
+  overflow:hidden;
+  width:220px;               /* fixed compact width */
+  position:relative;
+}
+
+/* small pulsing dot */
+.live-dot {
+  width:8px;
+  height:8px;
+  background:#ff2e2e;
+  border-radius:50%;
+  box-shadow:0 0 8px rgba(255,46,46,0.5);
+  animation: pulse 1.6s infinite;
+}
+
+/* sliding text effect (left-right repeating) */
+.live-text {
+  white-space:nowrap;
+  display:inline-block;
+  transform:translateX(100%);
+  animation: slideText 5s linear infinite;
+  padding-left:6px;
+  color:#ff2e2e;
+  font-weight:700;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity:1; }
+  50% { transform: scale(1.4); opacity:0.75; }
+  100% { transform: scale(1); opacity:1; }
+}
+
+@keyframes slideText {
+  0%   { transform: translateX(100%); }
+  10%  { transform: translateX(0%); }
+  60%  { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* responsive: make banner smaller on tiny screens */
+@media (max-width:420px){
+  .live-banner { width:170px; font-size:12px; }
+         }
