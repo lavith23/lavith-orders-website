@@ -1,70 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LAMEZONE - Services</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Services — LAMEZONE</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <h1 class="logo">LAMEZONE</h1>
+  <header class="header">
+    <div class="logo">LAMEZONE</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-        <!-- 🔥 RED LIVE BANNER -->
-        <div class="live-banner">🔥 Orders are LIVE now 🔥</div>
+  <main class="services-wrap">
+    <h2 style="margin:10px 20px">All Services</h2>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html" class="active">Services</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+    <div class="service-card" style="max-width:1100px;margin:18px auto">
+      <div class="info">
+        <h3>Website Creation</h3>
+        <p>One-page responsive website with contact & WhatsApp ordering.</p>
+      </div>
+      <div>
+        <a class="btn-primary" href="service-detail.html?service=Website%20Creation&price=499&desc=One-page%20responsive%20site">See details</a>
+      </div>
+    </div>
 
-    <!-- SERVICE SECTION -->
-    <section class="services">
-        <h2>Our Services</h2>
+    <div class="service-card" style="max-width:1100px;margin:18px auto">
+      <div class="info">
+        <h3>Graphics & Logo Design</h3>
+        <p>Thumbnails, logos, banners for your YouTube or business.</p>
+      </div>
+      <div>
+        <a class="btn-primary" href="service-detail.html?service=Logo%20Design&price=149&desc=Logo%20and%20thumbnail%20design">See details</a>
+      </div>
+    </div>
 
-        <!-- SERVICE CARD 1 -->
-        <div class="service-card">
-            <h3>Website Creation</h3>
-            <p>We build professional websites for personal and business use.</p>
-            <button onclick="order('Website Creation')">Order Now</button>
-        </div>
+    <div class="service-card" style="max-width:1100px;margin:18px auto">
+      <div class="info">
+        <h3>Phone Setup & Backup</h3>
+        <p>App install, WhatsApp backup, storage clean.</p>
+      </div>
+      <div>
+        <a class="btn-primary" href="service-detail.html?service=Phone%20Setup&price=99&desc=App%20install%2C%20backup">See details</a>
+      </div>
+    </div>
 
-        <!-- SERVICE CARD 2 -->
-        <div class="service-card">
-            <h3>Graphics & Logo Design</h3>
-            <p>High-quality logos, banners, thumbnails and more.</p>
-            <button onclick="order('Graphics & Logo Design')">Order Now</button>
-        </div>
+    <div class="service-card" style="max-width:1100px;margin:18px auto">
+      <div class="info">
+        <h3>Minecraft Server Setup</h3>
+        <p>Server creation for Bedrock/Java with plugins.</p>
+      </div>
+      <div>
+        <a class="btn-primary" href="service-detail.html?service=Minecraft%20Server%20Setup&price=199&desc=Server%20setup%20with%20plugins">See details</a>
+      </div>
+    </div>
 
-        <!-- SERVICE CARD 3 -->
-        <div class="service-card">
-            <h3>Phone Setup & Backup</h3>
-            <p>Full phone setup, cleaning, optimization, data backup.</p>
-            <button onclick="order('Phone Setup & Backup')">Order Now</button>
-        </div>
+  </main>
 
-        <!-- SERVICE CARD 4 (NEW) -->
-        <div class="service-card">
-            <h3>Online PDF Notes (All Subjects)</h3>
-            <p>Get all subject PDF notes, updated and easy to download.</p>
-            <button onclick="order('Online PDF Notes (All Subjects)')">Order Now</button>
-        </div>
-
-    </section>
-
-    <script>
-        function order(serviceName) {
-            const phone = "918209175051"; // Your number
-            const msg = `Hello, I want to order: ${serviceName}`;
-            window.location.href = `https://wa.me/${phone}?text=` + encodeURIComponent(msg);
-        }
-    </script>
-
+  <footer>© 2025 LAMEZONE</footer>
 </body>
 </html>
