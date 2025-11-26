@@ -1,5 +1,5 @@
 // app.js - handles service detail, order action
-const WA_PHONE = "+918209175150"; // +91 8209175150
+const WA_PHONE = "+91 82091 75150"; // +91 82091 75150
 
 // helper: read URL param
 function getParam(name){
