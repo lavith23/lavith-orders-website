@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sign In - LAMEZONE</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #0f0f0f;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: white;
+    }
+    .login-box {
+        background: #1a1a1a;
+        padding: 30px;
+        width: 300px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+    .login-box h2 {
+        margin-bottom: 25px;
+    }
+    input {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+    }
+    button {
+        width: 100%;
+        padding: 12px;
+        background: #4CAF50;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    button:hover {
+        background: #46a049;
+    }
+    .error {
+        color: red;
+        margin-top: 10px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+    <h2>LAMEZONE Login</h2>
+
+    <input type="text" id="username" placeholder="Enter Username">
+    <input type="password" id="password" placeholder="Enter Password">
+
+    <button onclick="login()">Sign In</button>
+
+    <div class="error" id="error-msg"></div>
+</div>
+
+<script>
+function login() {
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+
+    // you can set your own login details here
+    const correctUser = "admin";
+    const correctPass = "12345";
+
+    if (user === correctUser && pass === correctPass) {
+        window.location.href = "index.html";  // go to main website
+    } else {
+        document.getElementById("error-msg").innerText = "Incorrect login details!";
+    }
+}
+</script>
+
+</body>
+</html>
